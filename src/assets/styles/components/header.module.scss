@@ -1,0 +1,132 @@
+@import "../variables.scss";
+@import "../animations.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  min-height: 80px;
+  height: auto;
+  z-index: 500;
+
+  border-bottom: 1px solid $text-light;
+
+  color: $text-light;
+  ul {
+    display: flex;
+    gap: 80px;
+    list-style-type: none;
+    li {
+      z-index: 501;
+      display: inline-block;
+      position: relative;
+      font-family: 'Righteous';
+      cursor: pointer;
+      font-size: 20px;
+      transition: 0.3s;
+      &:hover {
+        color: $text-light-brown;
+      }
+    }
+    li:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      display: block;
+      margin-top: 0px;
+      right: 0;
+      background: $text-light-brown;
+      transition: width .5s ease;
+    }
+    li:hover:after {
+      width: 100%;
+      left: 0;
+      background: $text-light-brown;
+    }
+  }
+}
+.logo {
+  border-radius: 100%;
+  width: 120px;
+  filter: brightness(90%);
+
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: 25%;
+
+  animation-name: rollDown;
+  animation-duration: 0.5s;
+}
+.logo_hidden {
+  border-radius: 100%;
+  width: 120px;
+  filter: brightness(90%);
+
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: -300px;
+  transform: scale(0.8);
+
+  animation-name: rollUp;
+  animation-duration: 0.8s;
+}
+.hamburger {
+  display: none;
+}
+.menu_open {
+  position: relative;
+  animation-name: menuOpen;
+  animation-duration: 0.5s;
+}
+.menu_close {
+  position: relative;
+  animation-name: menuClose;
+  animation-duration: 0.5s;
+}
+.menu_close_init {
+  position: relative;
+  top: -100px;
+  background-color: red;
+}
+
+.header_open {
+  height: 160px !important;
+  transition: 0.5s;
+}
+.header_close {
+  height: 80px;
+  transition: 0.5s;
+}
+
+
+@media only screen and (max-width: 425px) {
+  .menu_close {
+    position: relative;
+    top: -100px;
+  }
+  .header {
+    min-height: 80px;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  .hamburger {
+    position: absolute !important;
+    top: 15px;
+    right: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+
+  }
+  .logo {
+    filter: brightness(80%);
+    transform: scale(0.8);
+  }
+}

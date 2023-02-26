@@ -1,0 +1,42 @@
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes rollUp {
+  from {
+    top: 25%;
+  }
+  to {
+    top: -300%;
+  }
+}
+@keyframes rollDown {
+  from {
+    top: -300%;
+  }
+  to {
+    top: 25%;
+  }
+}
+
+@keyframes menuOpen {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0px;
+  }
+}
+@keyframes menuClose {
+  from {
+    top: 0px;
+  }
+  to {
+    top: -100px;
+  }
+}
