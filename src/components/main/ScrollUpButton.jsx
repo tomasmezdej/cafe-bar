@@ -11,10 +11,9 @@ const ScrollUpButton = () => {
     // let backgroundImage = setBackgroundImage(viewPort.width)// viewPort.width < 636 ? backgroundImageMobile : backgroundImageDesktop
 
     window.addEventListener("scroll", () => {
-        if (window.scrollY > 200 && scrollUpButton) {
+        if (window.scrollY > 200) {
           setScrollUpButton(true)
-        }
-        if (window.scrollY <= 200 && !scrollUpButton) {
+        } else {
           setScrollUpButton(false)
         }
         // setScrollUpButton(viewPort.width < 425 ? backgroundImageMobile : backgroundImageDesktop)
