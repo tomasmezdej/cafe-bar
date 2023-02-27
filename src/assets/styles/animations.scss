@@ -40,3 +40,46 @@
     top: -100px;
   }
 }
+
+@keyframes rollFromLeft {
+  from {
+    position: relative;
+    left: -500px;
+  }
+  to {
+    position: relative;
+    left: 0px;
+  }
+}
+
+@keyframes noAnimation {
+  100% {
+    left: 0px
+  }
+}
+
+@keyframes hamburgerAnimation {
+  from {
+    right: -100px;
+  }
+  to {
+    right: 0px;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    right: -50px;
+  }
+  to {
+    right: 0px;
+  }
+}
+@keyframes slideOut {
+  from {
+    right: 0px;
+  }
+  to {
+    right: -100px;
+  }
+}

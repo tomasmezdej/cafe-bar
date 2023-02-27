@@ -1,12 +1,12 @@
 import main_view_card_styles from "../../assets/styles/components/mainViewCard.module.scss"
-
+import imgTop from "../../assets/images/brush_top.png"
 const MainViewCard = (props) => {
 
   const className = props.dark ? main_view_card_styles.main_view_card__dark_bg : main_view_card_styles.main_view_card__light_bg
 
   const style = {
-    backgroundImage: `${(props.isMobile ? 'linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)) ,' : "")}url(${props.backgroundImage})`,
-
+    // backgroundImage: `${(props.isMobile ? 'linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)) ,' : "")}url(${props.backgroundImage})`,
+    backgroundImage: `url(${props.backgroundImage})`,
   }
 
   return (
@@ -14,8 +14,27 @@ const MainViewCard = (props) => {
       className={`${main_view_card_styles.main_view_card} ${className}`}
       style={style}
     >
-      {/* <img src={props.backgroundImage} alt="" /> */}
-      { props.children }
+      {
+        props.includeBrush &&
+        <img
+          className={main_view_card_styles.main_view_card__brush_top}
+          src={imgTop}
+          alt=""
+        />
+      }
+      <div
+        className={main_view_card_styles.main_view_card__content}
+      >
+        { props.children }
+      </div>
+      {
+        props.includeBrush &&
+        <img
+          className={main_view_card_styles.main_view_card__brush_bottom}
+          src={imgTop}
+          alt=""
+        />
+      }
     </div>
   )
 }

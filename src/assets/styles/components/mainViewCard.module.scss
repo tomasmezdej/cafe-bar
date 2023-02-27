@@ -4,14 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:ital,wght@0,300;0,600;0,700;0,800;1,800&family=Righteous&display=swap');
 
 .main_view_card {
-  height: 100vh;
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   h1, h2 {
   }
@@ -21,6 +17,24 @@
 
 
 }
+.main_view_card__content {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_view_card__brush_top {
+  position: absolute;
+  width: 100%;
+  transform: rotate(180deg);
+}
+
+.main_view_card__brush_bottom {
+  position: absolute;
+  width: 100%;
+  bottom: -10px;
+}
+
 .main_view_card__dark_bg {
   background-color: $background-dark;
   color: $text-light;

@@ -2,7 +2,8 @@
 import {Outlet} from "react-router-dom";
 
 import Header from "../components/main/Header"
-import Footer from "../components/main/Header"
+import Footer from "../components/main/Footer"
+import ScrollUpButton from "../components/main/ScrollUpButton"
 
 const Default = () => {
   return (
@@ -10,6 +11,7 @@ const Default = () => {
       <Header />
       <Outlet />
       <Footer />
+      <ScrollUpButton />
     </>
   );
 };

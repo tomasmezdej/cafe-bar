@@ -1,5 +1,6 @@
 import styles from "../../assets/styles/components/header.module.scss"
-import logo from "../../assets/images/header_logo.png"
+// import logo from "../../assets/images/header_logo.png"
+import logo from "../../assets/images/icon.jpg"
 
 import { GiHamburgerMenu } from "react-icons/gi"
 import { useEffect, useState } from "react"
@@ -35,6 +36,7 @@ const Header = () => {
   useEffect(() => {
     setInitLoad(false)
     setIlClassName(menuConditions)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [menuOpen])
 
   return (

@@ -4,8 +4,9 @@ import main_view_card_styles from "../../assets/styles/components/mainViewCard.m
 
 import MainViewCard from "../cards/MainViewCard";
 
-import backgroundImageDesktop from "../../assets/images/main_background.jpg"
-import backgroundImageMobile from "../../assets/images/coffee_making.jpg"
+// import backgroundImageDesktop from "../../assets/images/main_background.jpg"
+import backgroundImageDesktop from "../../assets/images/main_background_edited.png"
+import backgroundImageMobile from "../../assets/images/coffee_making_edited.png"
 import { useState } from "react";
 
 const setViewport = () => {
@@ -58,6 +59,7 @@ const Home = () => {
                 ahoj2
             </MainViewCard>
             <MainViewCard
+                includeBrush
                 dark
             >
                 ahoj
@@ -66,6 +68,45 @@ const Home = () => {
                 light
             >
                 ahoj2
+            </MainViewCard>
+            <MainViewCard
+                includeBrush
+                dark
+            >
+                ahoj
+            </MainViewCard>
+            <MainViewCard
+                light
+            >
+                ahoj2
+            </MainViewCard>
+            <MainViewCard
+                includeBrush
+                dark
+            >
+                ahoj
+            </MainViewCard>
+            <MainViewCard
+                light
+            >
+                ahoj2
+            </MainViewCard>
+            <MainViewCard
+                includeBrush
+                dark
+            >
+                ahoj
+            </MainViewCard>
+            <MainViewCard
+                light
+            >
+                ahoj2
+            </MainViewCard>
+            <MainViewCard
+                includeBrush
+                dark
+            >
+                ahoj
             </MainViewCard>
         </div>
     );
