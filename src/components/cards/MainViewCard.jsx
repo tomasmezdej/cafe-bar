@@ -9,6 +9,11 @@ const MainViewCard = (props) => {
     backgroundImage: `url(${props.backgroundImage})`,
   }
 
+  const contentStyle = {
+    alignItems: props.alignCenter ? "center" : "",
+    justifyContent: props.justifyCenter ? "center" : ""
+  }
+
   return (
     <div
       className={`${main_view_card_styles.main_view_card} ${className}`}
@@ -24,6 +29,7 @@ const MainViewCard = (props) => {
       }
       <div
         className={main_view_card_styles.main_view_card__content}
+        style={contentStyle}
       >
         { props.children }
       </div>

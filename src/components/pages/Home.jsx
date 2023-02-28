@@ -7,6 +7,7 @@ import MainViewCard from "../cards/MainViewCard";
 // import backgroundImageDesktop from "../../assets/images/main_background.jpg"
 import backgroundImageDesktop from "../../assets/images/main_background_edited.png"
 import backgroundImageMobile from "../../assets/images/coffee_making_edited.png"
+import cardTwoImage from "../../assets/images/coffee_making_content.jpg"
 import { useState } from "react";
 
 const setViewport = () => {
@@ -36,6 +37,8 @@ const Home = () => {
         <div className={home_page_styles.home_page}>
             <MainViewCard
                 dark
+                alignCenter
+                justifyCenter
                 backgroundImage={backgroundImage}
                 isMobile={viewPort.width < 425}
             >
@@ -56,7 +59,15 @@ const Home = () => {
             <MainViewCard
                 light
             >
-                ahoj2
+                <div className={main_view_card_styles.second_card}>
+                    <div className={main_view_card_styles.second_card__row_one}>
+                        <img src={cardTwoImage} alt="" />
+                        <h1>
+                            A CUP OF GOURMET COFFEE SHARED WITH A FRIEND IS HAPPINESS TASTED AND TIME WELL SPENT.
+                        </h1>
+                    </div>
+
+                </div>
             </MainViewCard>
             <MainViewCard
                 includeBrush
