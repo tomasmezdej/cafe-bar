@@ -1,6 +1,6 @@
 import styles from "../../assets/styles/components/header.module.scss"
 // import logo from "../../assets/images/header_logo.png"
-import logo from "../../assets/images/icon.jpg"
+import logo from "../../assets/images/logo.svg"
 
 import { GiHamburgerMenu } from "react-icons/gi"
 import { useEffect, useState } from "react"
@@ -49,7 +49,7 @@ const Header = () => {
       />
       <ul className={ulClassName}>
         <li>
-          Home { initLoad }
+          Home
         </li>
         <li>
           Staff

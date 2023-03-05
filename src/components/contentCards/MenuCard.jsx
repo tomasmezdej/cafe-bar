@@ -1,8 +1,7 @@
 import main_view_card_styles from "../../assets/styles/components/mainViewCard.module.scss"
-/* import cardThreeImage from "../../assets/images/space.jpeg"
-import cardThreeImageTwo from "../../assets/images/bar_setup.jpg"
-import takeWayStamp from "../../assets/images/takeway_stamp.png"
-import cardThreeImageThree from "../../assets/images/coffee_done.jpg" */
+import MenuSection from "../menu/MenuSection"
+
+import { MenuSectionFrontLeft, MenuSectionFrontRight } from "../../config/menu"
 
 const MenuCard = () => {
   return (
@@ -14,6 +13,33 @@ const MenuCard = () => {
             <h1>
               MENUS
             </h1>
+        </div>
+        <div className={main_view_card_styles.fifth_card__row_two}>
+          <div className={main_view_card_styles.fifth_card__row_two_col_one}>
+            {
+              MenuSectionFrontLeft.map((section, index) =>
+                <MenuSection
+                  key={index}
+                  icon={section.icon}
+                  title={section.title}
+                  list={section.list}
+                />
+              )
+            }
+          </div>
+          <div className={main_view_card_styles.fifth_card__row_two_col_two}>
+            {
+              MenuSectionFrontRight.map((section, index) =>
+                <MenuSection
+                  key={index}
+                  outlined={section.outlined}
+                  icon={section.icon}
+                  title={section.title}
+                  list={section.list}
+                />
+              )
+            }
+          </div>
         </div>
         {/* <div className={main_view_card_styles.fifth_card__row_two}>
             <div>

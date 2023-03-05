@@ -186,6 +186,7 @@
     line-height: 0px;
   }
   img {
+    margin-top: -70px;
     filter:brightness(0.75);
     transform: rotate(-90deg);
     max-width: 400px;
@@ -211,6 +212,7 @@
       line-height: 0px;
     }
     img {
+      margin-top: 0px;
       transform: rotate(0deg);
       max-width: 100% !important;
       padding-bottom: 50px;
@@ -391,6 +393,7 @@
       margin-top: -130px;
     }
     img {
+      min-width: 250px;
       width: 100%;
     }
     @media only screen and (max-width: 425px) {
@@ -407,8 +410,7 @@
 
 
 .fifth_card {
-  width: 100%;
-  padding: 0% 10%;
+  width: 90vw !important;
 }
 .fifth_card__row_one {
   display: flex;
@@ -437,4 +439,26 @@
     line-height: 0px;
     color: $text-light-brown;
   }
+}
+.fifth_card__row_two {
+  display: flex;
+  flex-direction: row;
+  background-color: $background-dark;
+  color: white;
+  padding: 15px 10px ;
+  border-radius: 8px;
+
+  @media only screen and (max-width: 425px) {
+    flex-direction: column;
+    padding: 10px 5px ;
+  }
+
+}
+
+.fifth_card__row_two_col_one {
+  width: 100%;
+}
+
+.fifth_card__row_two_col_two {
+  width: 100%;
 }
