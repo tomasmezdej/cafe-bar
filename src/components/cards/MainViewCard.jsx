@@ -14,6 +14,7 @@ const MainViewCard = (props) => {
     justifyContent: props.justifyCenter ? "center" : ""
   }
 
+
   return (
     <div
       className={`${main_view_card_styles.main_view_card} ${className}`}
@@ -27,8 +28,9 @@ const MainViewCard = (props) => {
           alt=""
         />
       }
+
       <div
-        className={main_view_card_styles.main_view_card__content}
+        className={`${main_view_card_styles.main_view_card__content} ${props.className}`}
         style={contentStyle}
       >
         { props.children }

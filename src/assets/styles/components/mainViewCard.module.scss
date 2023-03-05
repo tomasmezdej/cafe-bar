@@ -1,13 +1,16 @@
 @import "../variables.scss";
 @import "../animations.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:ital,wght@0,300;0,600;0,700;0,800;1,800&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:ital,wght@0,300;0,600;0,700;0,800;1,800&family=Righteous&display=swap&');
 
 .main_view_card {
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
 
   h1, h2 {
   }
@@ -17,8 +20,14 @@
 
 
 }
+.main_view_card__padding {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .main_view_card__content {
   min-height: 100vh;
+  max-width: 1500px;
   display: flex;
   /* align-items: center;
   justify-content: center; */
@@ -34,7 +43,7 @@
 .main_view_card__brush_bottom {
   position: absolute;
   width: 100%;
-  bottom: -10px;
+  bottom: 0px;
   z-index: 99;
 }
 
@@ -99,12 +108,333 @@
 .second_card__row_one {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  gap: 25%;
+  position: relative;
+  gap: 5%;
+  div:nth-child(1) {
+    order: 1;
+  }
+  div:nth-child(2) {
+    order: 2;
+  }
   h1 {
+    font-family: 'Righteous';
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    text-shadow: $background-light 1px 0 15px;
+  }
+  h2 {
+    font-family: 'Righteous';
+    font-size: 30px;
     text-align: center;
+    font-weight: bold;
+    margin-top: 130px;
+    // font-family: ;
   }
   img {
-    width: 15%;
+    opacity: 0.95;
+    max-width: 350px;
+  }
+  @media only screen and (max-width: 425px) {
+    flex-direction: column;
+
+    div:nth-child(1) {
+      order: 2;
+    }
+    div:nth-child(2) {
+      order: 1;
+    }
+    h1 {
+      font-size: 40px;
+      position: relative;
+      top: 0%;
+      left: 0%;
+    }
+    h2 {
+      font-size: 22px;
+      margin-top: 0px;
+      // font-family: ;
+    }
+    img {
+      opacity: 0.95;
+      width: 100%;
+    }
+  }
+}
+
+.second_card__row_two {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  gap: 15%;
+  p {
+    font-family: 'Righteous';
+    margin-top: 130px;
+    font-weight:500;
+    font-size: 18px;
+  }
+  h4 {
+    font-weight: normal;
+    font-size: 32px;
+    font-family: 'Dancing Script';
+    line-height: 30px;
+  }
+  h5 {
+    font-family: 'Righteous';
+    font-weight: bold;
+    line-height: 0px;
+  }
+  img {
+    filter:brightness(0.75);
+    transform: rotate(-90deg);
+    max-width: 400px;
+  }
+  @media only screen and (max-width: 425px) {
+    flex-direction: column;
+    gap: 0%;
+    p {
+      font-family: 'Righteous';
+      margin-top: 50px;
+      font-weight:500;
+      font-size: 18px;
+    }
+    h4 {
+      font-weight: normal;
+      font-size: 32px;
+      font-family: 'Dancing Script';
+      line-height: 30px;
+    }
+    h5 {
+      font-family: 'Righteous';
+      font-weight: bold;
+      line-height: 0px;
+    }
+    img {
+      transform: rotate(0deg);
+      max-width: 100% !important;
+      padding-bottom: 50px;
+
+    }
+  }
+}
+
+.third_card__animation {
+
+  animation-name: scaleUp;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+}
+.third_card {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  h1 {
+    font-family: 'Righteous';
+    font-weight: 400;
+    font-size: 130px;
+    line-height: 20px;
+    color: $text-light
+  }
+
+  h2:nth-child(1) {
+    font-family: 'Dancing Script';
+    font-size: 65px;
+    line-height: 0px;
+    color: $text-light-brown;
+  }
+  h2:nth-child(3) {
+    font-family: 'Righteous';
+    font-size: 25px;
+    line-height: 0px;
+    color: $text-light;
+  }
+  @media only screen and (max-width: 425px) {
+    h1 {
+      font-size: 80px;
+      line-height: 80px;
+      margin-top: -15px;
+    }
+
+    h2:nth-child(1) {
+      font-size: 35px;
+      line-height: 5px;
+    }
+    h2:nth-child(3) {
+
+    }
+  }
+}
+
+.fourth_card {
+  width: 100%;
+  padding: 0% 10%;
+}
+.fourth_card__row_one {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  gap: 5%;
+  div:nth-child(1) {
+    order: 1;
+  }
+  div:nth-child(2) {
+    order: 2;
+  }
+  h1 {
+    font-family: 'Righteous';
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    text-shadow: $background-light 1px 0 15px;
+  }
+  h2 {
+    font-family: 'Righteous';
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 130px;
+    // font-family: ;
+  }
+  img {
+    opacity: 0.95;
+    max-width: 350px;
+  }
+  @media only screen and (max-width: 425px) {
+    flex-direction: column;
+
+    div:nth-child(1) {
+      order: 2;
+    }
+    div:nth-child(2) {
+      order: 1;
+    }
+    h1 {
+      font-size: 40px;
+      position: relative;
+      top: 0%;
+      left: 0%;
+    }
+    h2 {
+      font-size: 22px;
+      margin-top: 0px;
+      // font-family: ;
+    }
+    img {
+      opacity: 0.95;
+      width: 100%;
+    }
+  }
+}
+.fourth_card__row_two {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  gap: 10%;
+  p {
+    font-family: 'Righteous';
+    margin-top: 130px;
+    font-weight:500;
+    font-size: 18px;
+    @media only screen and (max-width: 425px) {
+      margin-top: 20px;
+    }
+  }
+
+  div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 180px;
+      align-self: flex-end;
+    }
+    @media only screen and (max-width: 425px) {
+      img {
+        align-self: center;
+      }
+    }
+  }
+  div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    h1 {
+      font-family: 'Righteous';
+      line-height: 0px;
+      font-size: 50px;
+      &:nth-child(2) {
+        color: $text-dark-brown;
+        padding-left: 33px;
+        margin-top: 10px;
+      }
+    }
+    img {
+      width: 100%;
+    }
+    @media only screen and (max-width: 425px) {
+      h1 {
+        font-family: 'Righteous';
+        line-height: 10px;
+        font-size: 50px;
+        &:nth-child(2) {
+          color: $text-dark-brown;
+        }
+      }
+    }
+
+  }
+  div:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    align-content: end;
+    div {
+      margin-top: -130px;
+    }
+    img {
+      width: 100%;
+    }
+    @media only screen and (max-width: 425px) {
+      div {
+        margin-top: 20px;
+      }
+    }
+  }
+  @media only screen and (max-width: 425px) {
+    flex-direction: column;
+    gap: 0%;
+  }
+}
+
+
+.fifth_card {
+  width: 100%;
+  padding: 0% 10%;
+}
+.fifth_card__row_one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media only screen and (max-width: 425px) {
+    margin-top: -40px;
+  }
+  h1 {
+    font-family: 'Righteous';
+    font-weight: 400;
+    font-size: 130px;
+    line-height: 0px;
+    margin-top: 30px;
+    color: $text-dark;
+    @media only screen and (max-width: 425px) {
+      font-size: 65px;
+      margin-top: 0px;
+    }
+  }
+
+  h2:nth-child(1) {
+    font-family: 'Dancing Script';
+    font-size: 65px;
+    line-height: 0px;
+    color: $text-light-brown;
   }
 }

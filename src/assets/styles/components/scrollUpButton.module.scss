@@ -8,6 +8,7 @@
   color: $text-medium-brown;
   cursor: pointer;
   transition: 0.3s;
+  z-index: 999;
   &:hover {
     transform: scale(1.1);
   }
