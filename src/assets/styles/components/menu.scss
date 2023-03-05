@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:ital,wght@0,300;0,600;0,700;0,800;1,800&family=Righteous&display=swap&');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:ital,wght@0,300;0,600;0,700;0,800;1,800&family=Dosis&display=swap&');
 @import "../variables.scss";
 
 .title_wrap {
   display: flex;
   align-items: center;
-  gap: 10px;
   padding: 0px 15px;
 }
 .title {
-  font-family: 'Righteous';
+  font-family: 'Dosis';
+  text-transform: uppercase;
   font-size: 35px;
   @media only screen and (max-width: 425px) {
     font-size: 30px;
@@ -22,7 +22,7 @@
   padding: 5px 15px;
 
   h1 {
-    font-family: 'Righteous';
+    font-family: 'Dosis';
     line-height: 0px;
     font-weight: 400;
     font-size: 20px;
@@ -30,7 +30,7 @@
   h2 {
     line-height: 0px;
     font-size: 13px;
-    font-family: 'Righteous';
+    font-family: 'Dosis';
     font-weight: 400;
 
   }
@@ -44,7 +44,7 @@
     cursor: default;
     background-color: $text-dark-brown;
     transition: 0.5s;
-    border-radius: 8px;
+    border-radius: 0px;
   }
   @media only screen and (max-width: 425px) {
     h1 {
@@ -56,7 +56,5 @@
 .element:has(.outline):not(:last-child) {
   border-left: 2px solid grey;
   border-right: 2px solid grey;
-  &:hover {
-    border-radius: 0px;
-  }
+
 }

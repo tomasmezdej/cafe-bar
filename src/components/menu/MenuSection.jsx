@@ -3,12 +3,17 @@ import "../../assets/styles/components/menu.scss"
 const MenuSection = (props) => {
 
   const wrapStyle = {
-    // border: "2px solid grey"
+    border: props.outlined && "2px solid grey"
   }
 
   return (
-    <div>
-      <div className={"title_wrap"}>
+    <div
+      style={props.outlined ? wrapStyle : {}}
+    >
+      <div
+        className={"title_wrap"}
+        style={{gap: props.icon ? "15px" : "0px"}}
+      >
         <div>
           {
             props.icon
@@ -21,7 +26,6 @@ const MenuSection = (props) => {
 
       <div
         className="elementWrap"
-        style={props.outlined ? wrapStyle : {}}
       >
         {
           props.list.map((element, index) =>

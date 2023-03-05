@@ -1,7 +1,23 @@
-import { GiWaterBottle, GiPopcorn } from "react-icons/gi"
-import { MdCoffee, MdOutlineCoffee } from "react-icons/md"
+import {
+  GiWaterBottle,
+  GiPopcorn,
+  GiGlassShot,
+  GiPineTree,
+  GiPirateCaptain,
+  GiBrandyBottle,
+  GiLemon,
+  GiFlowers
+} from "react-icons/gi"
+import {
+  MdCoffee,
+  MdOutlineCoffee,
+  MdLiquor
+} from "react-icons/md"
+import { BiDrink } from "react-icons/bi"
 import { IoBeerOutline } from "react-icons/io5"
 import { IoIosWine } from "react-icons/io"
+import { FaGlassWhiskey } from "react-icons/fa"
+
 export const MenuSectionFrontLeft = [
   {
     icon: <GiWaterBottle size={"35px"}/>,
@@ -177,7 +193,7 @@ export const MenuSectionFrontRight = [
   {
     icon: <IoBeerOutline  size={"35px"}/>,
     title: "PIVKO",
-    outlined: true,
+    outlined: false,
     list: [
       {
         title: "Desinka -10°",
@@ -251,6 +267,309 @@ export const MenuSectionFrontRight = [
         title: "Červené suché",
         volume: "Podľa ponuky 1dcl",
         price: "1,50 €"
+      }
+    ]
+  }
+]
+
+export const MenuSectionBackLeft = [
+  {
+    icon: <GiGlassShot  size={"35px"}/>,
+    title: "VODKA",
+    outlined: false,
+    list: [
+      {
+        title: "Vodka 40 %",
+        volume: "40 ml",
+        price: "1,00 €"
+      },
+      {
+        title: "Vodka Goral 40 %",
+        volume: "40 ml",
+        price: "1,30 €"
+      },
+      {
+        title: "Vodka Absolut 40 %",
+        volume: "40 ml",
+        price: "1,60 €"
+      },
+      {
+        title: "Vodka Nemiroff 40 %",
+        volume: "40 ml",
+        price: "1,60 €"
+      },
+      {
+        title: "Vodka Russiam Standard 40 %",
+        volume: "40 ml",
+        price: "1,80 €"
+      }
+    ]
+  },
+  {
+    icon: <GiPineTree  size={"35px"}/>,
+    title: "BOROVIČKA",
+    outlined: false,
+    list: [
+      {
+        title: "Borovička Slovenská 40 %",
+        volume: "40 ml",
+        price: "1,00 €"
+      },
+      {
+        title: "Borovička Koniferum 37,5 %",
+        volume: "40 ml",
+        price: "1,40 €"
+      },
+      {
+        title: "Borec 38 %",
+        volume: "40 ml",
+        price: "1,40 €"
+      },
+      {
+        title: "Borovička Spišská 40 %",
+        volume: "40 ml",
+        price: "1,50 €"
+      }
+    ]
+  },
+  {
+    icon: false,
+    title: "CRAFTOVÉ GINY Z DIELNE BVD",
+    outlined: true,
+    list: [
+      {
+        title: "Lučky GIN 40 %",
+        volume: "40 ml",
+        price: "2,10 €"
+      },
+      {
+        title: "BVD Slovenský GIN 43,2 %",
+        volume: "40 ml",
+        price: "2,70 €"
+      },
+    ]
+  },
+  {
+    icon: <GiPirateCaptain  size={"35px"}/>,
+    title: "RUM",
+    outlined: false,
+    list: [
+      {
+        title: "Um tuzemský 40 %",
+        volume: "40 ml",
+        price: "1,00 €"
+      },
+      {
+        title: "Bacardi OakHeard 38 %",
+        volume: "40 ml",
+        price: "1,60 €"
+      },
+      {
+        title: "Captain Morgan Spiced Gold 35 %",
+        volume: "40 ml",
+        price: "1,60 €"
+      },
+      {
+        title: "Diplomatico Reserva Exlcusiva 40 %",
+        volume: "40 ml",
+        price: "4,20 €"
+      },
+      {
+        title: "Pyrat X.O. 40 %",
+        volume: "40 ml",
+        price: "3,60 €"
+      },
+      {
+        title: "Pacifico Gran Reserva 40 %",
+        volume: "40 ml",
+        price: "3,70 €"
+      },
+      {
+        title: "Flor de Caňa Centenario 40 %",
+        volume: "40 ml",
+        price: "3,60 €"
+      },
+      {
+        title: "Zacapa Centenario 40 %",
+        volume: "40 ml",
+        price: "6,00 €"
+      },
+    ]
+  },
+  {
+    icon: <GiBrandyBottle  size={"35px"}/>,
+    title: "COGNAC A BRANDY",
+    outlined: false,
+    list: [
+      {
+        title: "Hennessy V.S. 40 %",
+        volume: "40 ml",
+        price: "4,00 €"
+      },
+      {
+        title: "Matyšák VSOP Brandy 40 %",
+        volume: "40 ml",
+        price: "5,60 €"
+      }
+    ]
+  },
+  {
+    icon: <GiLemon  size={"35px"}/>,
+    title: "TEQUILA",
+    outlined: false,
+    list: [
+      {
+        title: "Tequilla Pepe Lopez 40 %",
+        volume: "40 ml gold/silver",
+        price: "1,80 €"
+      }
+    ]
+  }
+]
+
+export const MenuSectionBackRight = [
+  {
+    icon: <GiFlowers  size={"35px"}/>,
+    title: "VOĽBA PRE ŽENY",
+    outlined: false,
+    list: [
+      {
+        title: "Lučky Pink GIN 38 %",
+        volume: "40 ml",
+        price: "2,10 €"
+      },
+      {
+        title: "Baileys likér 17 %",
+        volume: "40 ml",
+        price: "1,80 €"
+      }
+    ]
+  },
+  {
+    icon: <FaGlassWhiskey  size={"28px"}/>,
+    title: "WHISKEY",
+    outlined: false,
+    list: [
+      {
+        title: "Ballantine´s 40 %",
+        volume: "40 ml",
+        price: "1,70 €"
+      },
+      {
+        title: "Jack Daniels 40 %",
+        volume: "40 ml",
+        price: "2,60 €"
+      },
+      {
+        title: "Jack Daniels Honey 35 %",
+        volume: "40 ml",
+        price: "2,60 €"
+      },
+      {
+        title: "Jack Daniels Fire 35 %",
+        volume: "40 ml",
+        price: "2,60 €"
+      },
+      {
+        title: "Jameson 40 %",
+        volume: "40 ml",
+        price: "2,50 €"
+      },
+      {
+        title: "Tullamore Dew 40 %",
+        volume: "40 ml",
+        price: "2,50 €"
+      }
+    ]
+  },
+  {
+    icon: <MdLiquor  size={"35px"}/>,
+    title: "LIKÉR",
+    outlined: false,
+    list: [
+      {
+        title: "Fernet Citrus 27 %",
+        volume: "40 ml",
+        price: "1,40 €"
+      },
+      {
+        title: "Becherovka 38 %",
+        volume: "40 ml",
+        price: "1,40 €"
+      },
+      {
+        title: "Jägermeister 35 %",
+        volume: "40 ml",
+        price: "1,80 €"
+      }
+    ]
+  },
+  {
+    icon: false,
+    title: "TATRA TEA",
+    outlined: true,
+    list: [
+      {
+        title: "Citrus 32 %",
+        volume: "40 ml",
+        price: "1,60 €"
+      },
+      {
+        title: "Peach 42 %",
+        volume: "40 ml",
+        price: "1,70 €"
+      },
+      {
+        title: "Flower 47 %",
+        volume: "40 ml",
+        price: "1,60 €"
+      },
+      {
+        title: "Originál 52 %",
+        volume: "40 ml",
+        price: "1,70 €"
+      },
+      {
+        title: "Forest Fruit 62 %",
+        volume: "40 ml",
+        price: "1,90 €"
+      },
+      {
+        title: "Apple and Pear 67 %",
+        volume: "40 ml",
+        price: "1,90 €"
+      }
+    ]
+  },
+  {
+    icon: <BiDrink  size={"35px"}/>,
+    title: "DESTILÁTY A LIEHOVINY",
+    outlined: false,
+    list: [
+      {
+        title: "Slivovica Bošacka 52 %",
+        volume: "40 ml",
+        price: "1,70 €"
+      },
+      {
+        title: "Slivovica Jelínek 50 %",
+        volume: "40 ml",
+        price: "1,80 €"
+      },
+      {
+        title: "Hruškovica Jelínek 40 %",
+        volume: "40 ml",
+        price: "1,80 €"
+      },
+      {
+        title: "Trnkovica Jelínek 42 %",
+        volume: "40 ml",
+        price: "1,80 €"
+      },
+      {
+        title: "Marhuľovica BVD 45 %",
+        volume: "40 ml",
+        price: "3,20 €"
       }
     ]
   }

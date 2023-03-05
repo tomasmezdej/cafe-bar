@@ -1,17 +1,22 @@
+import { useState } from "react"
 
 import main_view_card_styles from "../../assets/styles/components/mainViewCard.module.scss"
 import cardTwoImage from "../../assets/images/coffee_making_content.jpg"
 import cardTwoImageTwo from "../../assets/images/pizza.jpg"
 
+
 const IntroCard = () => {
 
   return (
-    <div className={main_view_card_styles.second_card}>
+    <div
+      id="TEST_ID"
+      className={main_view_card_styles.second_card}
+    >
         <div className={main_view_card_styles.second_card__row_one}>
             <div className="img">
               <img src={cardTwoImage} alt="" />
             </div>
-            <div className="text">
+            <div id="INTRO_CARD_TITLE_ID" className="text">
               <h1>
                 OUR PASSIONS
               </h1>

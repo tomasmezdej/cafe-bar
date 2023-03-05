@@ -1,7 +1,12 @@
 import main_view_card_styles from "../../assets/styles/components/mainViewCard.module.scss"
 import MenuSection from "../menu/MenuSection"
 
-import { MenuSectionFrontLeft, MenuSectionFrontRight } from "../../config/menu"
+import {
+  MenuSectionFrontLeft,
+  MenuSectionFrontRight,
+  MenuSectionBackLeft,
+  MenuSectionBackRight
+} from "../../config/menu"
 
 const MenuCard = () => {
   return (
@@ -14,7 +19,10 @@ const MenuCard = () => {
               MENUS
             </h1>
         </div>
-        <div className={main_view_card_styles.fifth_card__row_two}>
+        <div
+          className={main_view_card_styles.fifth_card__row_two}
+          style={{marginTop: "15px", gap: "15px"}}
+        >
           <div className={main_view_card_styles.fifth_card__row_two_col_one}>
             {
               MenuSectionFrontLeft.map((section, index) =>
@@ -30,6 +38,37 @@ const MenuCard = () => {
           <div className={main_view_card_styles.fifth_card__row_two_col_two}>
             {
               MenuSectionFrontRight.map((section, index) =>
+                <MenuSection
+                  key={index}
+                  outlined={section.outlined}
+                  icon={section.icon}
+                  title={section.title}
+                  list={section.list}
+                />
+              )
+            }
+          </div>
+        </div>
+        <div
+          className={main_view_card_styles.fifth_card__row_two}
+          style={{marginTop: "15px", gap: "15px"}}
+        >
+          <div className={main_view_card_styles.fifth_card__row_two_col_one}>
+            {
+              MenuSectionBackLeft.map((section, index) =>
+                <MenuSection
+                  key={index}
+                  outlined={section.outlined}
+                  icon={section.icon}
+                  title={section.title}
+                  list={section.list}
+                />
+              )
+            }
+          </div>
+          <div className={main_view_card_styles.fifth_card__row_two_col_two}>
+            {
+              MenuSectionBackRight.map((section, index) =>
                 <MenuSection
                   key={index}
                   outlined={section.outlined}
