@@ -83,3 +83,13 @@
     right: -100px;
   }
 }
+
+
+@keyframes galleryImageAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

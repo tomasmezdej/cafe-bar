@@ -9,11 +9,14 @@ import backgroundImageDesktop from "../../assets/images/main_background_edited.p
 import backgroundImageMobile from "../../assets/images/coffee_making_edited.png"
 
 import thirdBackgroundImageAsset from "../../assets/images/coffee_done_2.jpg"
+import fourthBackgroundImageAsset from "../../assets/images/our_shop.jpg"
 
 import { useState } from "react";
 import IntroCard from "../contentCards/IntroCard";
 import ExperienceCard from "../contentCards/ExperienceCard";
 import MenuCard from "../contentCards/MenuCard";
+import ShopCard from "../contentCards/ShopCard";
+import GalleryCard from "../contentCards/GalleryCard";
 
 const setViewport = () => {
     return {
@@ -30,13 +33,14 @@ const Home = () => {
 
     const [firstBackgroundImage, setFirstBackgroundImage] = useState(updateBackgroundImageGlob(viewPort.width, backgroundImageMobile, backgroundImageDesktop))
     const [thirdBackgroundImage, setThirdBackgroundImage] = useState(updateBackgroundImageGlob(viewPort.width, thirdBackgroundImageAsset, thirdBackgroundImageAsset))
-
+    const [fourthBackgroundImage, setFourthBackgroundImage] = useState(updateBackgroundImageGlob(viewPort.width, fourthBackgroundImageAsset, fourthBackgroundImageAsset))
     // let backgroundImage = setBackgroundImage(viewPort.width)// viewPort.width < 636 ? backgroundImageMobile : backgroundImageDesktop
 
     window.addEventListener("resize", () => {
         viewPort = setViewport()
         setFirstBackgroundImage(viewPort.width < 425 ? backgroundImageMobile : backgroundImageDesktop)
         setThirdBackgroundImage(viewPort.width < 425 ? thirdBackgroundImageAsset : thirdBackgroundImageAsset)
+        setFourthBackgroundImage(viewPort.width < 425 ? fourthBackgroundImageAsset : fourthBackgroundImageAsset)
         /* backgroundImage = setBackgroundImage(viewPort.width) */
     })
 
@@ -102,48 +106,48 @@ const Home = () => {
                 includeBrush
                 dark
                 className={main_view_card_styles.main_view_card__padding}
+                backgroundImage={fourthBackgroundImage}
             >
-                ahoj
+                <div className={main_view_card_styles.third_card}>
+                    <div>
+                        <h2>
+                            Our
+                        </h2>
+                        <h1>
+                            SHOP
+                        </h1>
+                    </div>
+                </div>
             </MainViewCard>
             <MainViewCard
                 light
                 className={main_view_card_styles.main_view_card__padding}
             >
-                ahoj2
+                <ShopCard />
             </MainViewCard>
             <MainViewCard
                 includeBrush
                 dark
                 className={main_view_card_styles.main_view_card__padding}
             >
-                ahoj
+                <div className={main_view_card_styles.third_card}>
+                    <div>
+                        <h2>
+                            Our
+                        </h2>
+                        <h1>
+                            GALLERY
+                        </h1>
+                    </div>
+                </div>
             </MainViewCard>
             <MainViewCard
                 light
-                className={main_view_card_styles.main_view_card__padding}
+                alignCenter
             >
-                ahoj2
+                <GalleryCard />
             </MainViewCard>
-            <MainViewCard
-                includeBrush
-                dark
-                className={main_view_card_styles.main_view_card__padding}
-            >
-                ahoj
-            </MainViewCard>
-            <MainViewCard
-                light
-                className={main_view_card_styles.main_view_card__padding}
-            >
-                ahoj2
-            </MainViewCard>
-            <MainViewCard
-                includeBrush
-                dark
-                className={main_view_card_styles.main_view_card__padding}
-            >
-                ahoj
-            </MainViewCard>
+
         </div>
     );
 }

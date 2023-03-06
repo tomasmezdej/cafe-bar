@@ -52,7 +52,7 @@
   border-radius: 100%;
   width: 120px;
   background-color: $logo-background;
-  padding: 5px;
+  padding: 4px;
   // filter: brightness(90%);
 
   position: absolute;
@@ -62,6 +62,10 @@
 
   animation-name: rollDown;
   animation-duration: 0.8s;
+  @media only screen and (max-width: 856px) {
+    left: 47%;
+    width: 120px;
+  }
 }
 .logo_hidden {
   border-radius: 100%;
@@ -104,7 +108,7 @@
 }
 
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 856px) {
   .menu_close {
     position: relative;
     top: -100px;
