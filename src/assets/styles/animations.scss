@@ -12,7 +12,7 @@
     top: 25%;
   }
   to {
-    top: -300%;
+    top: -200%;
   }
 }
 @keyframes rollDown {
@@ -26,29 +26,40 @@
 
 @keyframes menuOpen {
   from {
-    top: -100px;
+    bottom: 0px;
   }
   to {
-    top: 0px;
+    bottom: 100px;
   }
 }
 @keyframes menuClose {
   from {
-    top: 0px;
+    bottom: 100px;
   }
   to {
-    top: -100px;
+    bottom: 0px;
   }
 }
 
 @keyframes rollFromLeft {
   from {
     position: relative;
-    left: -500px;
+    left: -800px;
   }
   to {
     position: relative;
     left: 0px;
+  }
+}
+
+@keyframes rollFromRight {
+  from {
+    position: relative;
+    right: -500px;
+  }
+  to {
+    position: relative;
+    right: 0px;
   }
 }
 

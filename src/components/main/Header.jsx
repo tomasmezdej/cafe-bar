@@ -4,6 +4,8 @@ import logo from "../../assets/images/logo.svg"
 
 import { GiHamburgerMenu } from "react-icons/gi"
 import { useEffect, useState } from "react"
+import HeaderMenuLeft from "./HeaderMenuLeft"
+import HeaderMenuRight from "./HeaderMenuRight"
 
 
 const Header = () => {
@@ -11,7 +13,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   const [initLoad, setInitLoad] = useState(true)
 
-  const menuConditions = menuOpen
+  const menuConditions =  menuOpen
     ? styles.menu_open
     : (initLoad)
       ? styles.menu_close_init
@@ -47,16 +49,13 @@ const Header = () => {
         className={logoClassName}
         src={logo} alt=""
       />
-      <ul className={ulClassName}>
-        <li>
-          Home
-        </li>
-        <li>
-          Staff
-        </li>
-        <li>
-          Events
-        </li>
+      <ul className={`${styles.menu__base} ${ulClassName}`}>
+        <HeaderMenuLeft />
+      </ul>
+      <ul>
+        <HeaderMenuRight
+          className={styles.hidden_on_mobile}
+        />
       </ul>
       <div className={styles.hamburger}>
         <GiHamburgerMenu

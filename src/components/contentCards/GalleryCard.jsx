@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import main_view_card_styles from "../../assets/styles/components/mainViewCard.module.scss"
 import GalleryElement from "../gallery/GalleryElement"
@@ -78,8 +78,26 @@ const GalleryCard = () => {
     setOverlayImg(img)
   }
 
+  useEffect(() => {
+    if (overlay) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'scroll'
+    }
+  }, [overlay])
+
+
+  useEffect(() => {
+    const scrollContainer = document.getElementById('HORIZONTAL_SCROLL');
+
+    scrollContainer.addEventListener('wheel', (evt) => {
+      evt.preventDefault();
+      scrollContainer.scrollLeft += evt.deltaY;
+    });
+  }, [])
+
   return (
-    <div className={main_view_card_styles.gallery_card}>
+    <div id="HORIZONTAL_SCROLL" className={main_view_card_styles.gallery_card}>
       {
         overlay &&
         <Overlay

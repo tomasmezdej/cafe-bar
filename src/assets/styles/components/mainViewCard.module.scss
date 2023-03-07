@@ -2,6 +2,7 @@
 @import "../animations.scss";
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:ital,wght@0,300;0,600;0,700;0,800;1,800&family=Righteous&display=swap&');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:ital,wght@0,300;0,600;0,700;0,800;1,800&family=Dosis&display=swap&');
 
 .main_view_card {
   position: relative;
@@ -485,9 +486,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: $background-dark;
+  // background-color: $background-dark;
   border-radius: 8px;
-  color: white;
+  // color: white;
+  color: $text-dark;
   margin-top: 15px;
   padding: 15px;
   text-align: center;
@@ -520,7 +522,6 @@
 .gallery_card {
   display: flex;
   width: 100vw;
-  height: 50vh;
   overflow-y: hidden;
   overflow-x: scroll;
   scrollbar-width: 50px;
@@ -528,6 +529,10 @@
   &::-webkit-scrollbar{
     display: none;
   }
+}
+.gallery_card__content {
+  min-height: 70vh !important;
+
 }
 .gallery_element {
   cursor: pointer;

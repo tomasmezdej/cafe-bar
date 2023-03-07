@@ -10,6 +10,7 @@ import backgroundImageMobile from "../../assets/images/coffee_making_edited.png"
 
 import thirdBackgroundImageAsset from "../../assets/images/coffee_done_2.jpg"
 import fourthBackgroundImageAsset from "../../assets/images/our_shop.jpg"
+import fifthBackgroundImageAsset from "../../assets/images/space.jpeg"
 
 import { useState } from "react";
 import IntroCard from "../contentCards/IntroCard";
@@ -34,6 +35,7 @@ const Home = () => {
     const [firstBackgroundImage, setFirstBackgroundImage] = useState(updateBackgroundImageGlob(viewPort.width, backgroundImageMobile, backgroundImageDesktop))
     const [thirdBackgroundImage, setThirdBackgroundImage] = useState(updateBackgroundImageGlob(viewPort.width, thirdBackgroundImageAsset, thirdBackgroundImageAsset))
     const [fourthBackgroundImage, setFourthBackgroundImage] = useState(updateBackgroundImageGlob(viewPort.width, fourthBackgroundImageAsset, fourthBackgroundImageAsset))
+    const [fifthBackgroundImage, setFifthBackgroundImage] = useState(updateBackgroundImageGlob(viewPort.width, fifthBackgroundImageAsset, fifthBackgroundImageAsset))
     // let backgroundImage = setBackgroundImage(viewPort.width)// viewPort.width < 636 ? backgroundImageMobile : backgroundImageDesktop
 
     window.addEventListener("resize", () => {
@@ -41,6 +43,7 @@ const Home = () => {
         setFirstBackgroundImage(viewPort.width < 425 ? backgroundImageMobile : backgroundImageDesktop)
         setThirdBackgroundImage(viewPort.width < 425 ? thirdBackgroundImageAsset : thirdBackgroundImageAsset)
         setFourthBackgroundImage(viewPort.width < 425 ? fourthBackgroundImageAsset : fourthBackgroundImageAsset)
+        setFifthBackgroundImage(viewPort.width < 425 ? fifthBackgroundImageAsset : fifthBackgroundImageAsset)
         /* backgroundImage = setBackgroundImage(viewPort.width) */
     })
 
@@ -102,6 +105,49 @@ const Home = () => {
             >
                 <MenuCard />
             </MainViewCard>
+            {/* <MainViewCard
+                includeBrush
+                dark
+                className={main_view_card_styles.main_view_card__padding}
+                backgroundImage={fourthBackgroundImage}
+            >
+                <div className={main_view_card_styles.third_card}>
+                    <div>
+                        <h2>
+                            Our
+                        </h2>
+                        <h1>
+                            STAFF
+                        </h1>
+                    </div>
+                </div>
+            </MainViewCard>
+            <MainViewCard
+                light
+                className={main_view_card_styles.main_view_card__padding}
+            >
+                staff
+            </MainViewCard>
+            <MainViewCard
+                includeBrush
+                dark
+                className={main_view_card_styles.main_view_card__padding}
+                backgroundImage={fourthBackgroundImage}
+            >
+                <div className={main_view_card_styles.third_card}>
+                    <div>
+                        <h1>
+                            EVENTS
+                        </h1>
+                    </div>
+                </div>
+            </MainViewCard>
+            <MainViewCard
+                light
+                className={main_view_card_styles.main_view_card__padding}
+            >
+                events
+            </MainViewCard> */}
             <MainViewCard
                 includeBrush
                 dark
@@ -129,6 +175,7 @@ const Home = () => {
                 includeBrush
                 dark
                 className={main_view_card_styles.main_view_card__padding}
+                backgroundImage={fifthBackgroundImage}
             >
                 <div className={main_view_card_styles.third_card}>
                     <div>
@@ -144,6 +191,7 @@ const Home = () => {
             <MainViewCard
                 light
                 alignCenter
+                className={main_view_card_styles.gallery_card__content}
             >
                 <GalleryCard />
             </MainViewCard>
