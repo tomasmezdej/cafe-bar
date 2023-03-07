@@ -36,7 +36,7 @@ const MainViewCard = (props) => {
         { props.children }
       </div>
       {
-        props.includeBrush &&
+        (props.includeBrush && !props.noBottomBrush) &&
         <img
           className={main_view_card_styles.main_view_card__brush_bottom}
           src={imgTop}

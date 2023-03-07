@@ -26,8 +26,8 @@ const Header = () => {
     : styles.header_close}`
 
   const logoClassName = menuOpen
-    ? `${styles.logo_hidden}`
-    : styles.logo
+    ? `${styles.logo__wrap__hidden}`
+    : styles.logo__wrap
 
   /* const ulClassName = menuOpen
     ? styles.menu_open
@@ -45,10 +45,12 @@ const Header = () => {
     <div
       className={divClassName}
     >
-      <img
-        className={logoClassName}
-        src={logo} alt=""
-      />
+      <div className={logoClassName}>
+        <img
+          className={styles.logo}
+          src={logo} alt=""
+        />
+      </div>
       <ul className={`${styles.menu__base} ${ulClassName}`}>
         <HeaderMenuLeft />
       </ul>

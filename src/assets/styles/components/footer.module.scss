@@ -1,0 +1,50 @@
+@import "../variables.scss";
+
+.footer {
+  display: flex;
+  align-items: flex-end;
+  color: $text-light;
+
+  padding: 15px;
+
+  width: 100%;
+
+
+
+  @media only screen and (max-width: 856px) {
+
+  }
+
+}
+/*
+.footer__content {
+  border: 1px solid $text-light-brown;
+  padding: 15px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 20%;
+}
+
+.footer__content_opening_hours {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+}
+.footer__content_address {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+.footer__content_address_sites {
+  display: flex;
+  gap: 25px;
+} */

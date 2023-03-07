@@ -18,6 +18,7 @@ import ExperienceCard from "../contentCards/ExperienceCard";
 import MenuCard from "../contentCards/MenuCard";
 import ShopCard from "../contentCards/ShopCard";
 import GalleryCard from "../contentCards/GalleryCard";
+import Footer from "../main/Footer";
 
 const setViewport = () => {
     return {
@@ -195,7 +196,14 @@ const Home = () => {
             >
                 <GalleryCard />
             </MainViewCard>
-
+            <MainViewCard
+                includeBrush
+                dark
+                className={main_view_card_styles.footer__content}
+                noBottomBrush
+            >
+                <Footer/>
+            </MainViewCard>
         </div>
     );
 }
