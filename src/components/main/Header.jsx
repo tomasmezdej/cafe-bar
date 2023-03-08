@@ -41,6 +41,10 @@ const Header = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [menuOpen])
 
+  const handleCloseMenu = () => {
+    setMenuOpen(false)
+  }
+
   return (
     <div
       className={divClassName}
@@ -52,7 +56,9 @@ const Header = () => {
         />
       </div>
       <ul className={`${styles.menu__base} ${ulClassName}`}>
-        <HeaderMenuLeft />
+        <HeaderMenuLeft
+          onCloseMenu={handleCloseMenu}
+        />
       </ul>
       <ul>
         <HeaderMenuRight

@@ -1,4 +1,14 @@
-const HeaderMenuLeft = () => {
+const HeaderMenuLeft = (props) => {
+
+  const scrollTo = (dest_element_id) => {
+    document
+      .getElementById(dest_element_id)
+      .scrollIntoView({behavior: 'smooth'}, true)
+    setTimeout(() => {
+      props.onCloseMenu()
+    }, 200);
+  }
+
   return (
     <>
       {/*
@@ -6,19 +16,29 @@ const HeaderMenuLeft = () => {
           Home
         </li>
       */}
-      <li>
+      <li
+        onClick={() => scrollTo('ABOUT_US_ID')}
+      >
         About us
       </li>
-      <li>
+      <li
+        onClick={() => scrollTo('LOCAL_SUPPLIERS_ID')}
+      >
         Local suppliers
       </li>
-      <li>
+      <li
+        onClick={() => scrollTo('MENU_ID')}
+      >
         Menu
       </li>
-      <li>
+      <li
+        onClick={() => scrollTo('SHOP_ID')}
+      >
         Shop
       </li>
-      <li>
+      <li
+        onClick={() => scrollTo('GALLERY_ID')}
+      >
         Gallery
       </li>
       {/*

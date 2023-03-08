@@ -17,6 +17,7 @@ const MainViewCard = (props) => {
 
   return (
     <div
+      id={props.id}
       className={`${main_view_card_styles.main_view_card} ${className}`}
       style={style}
     >

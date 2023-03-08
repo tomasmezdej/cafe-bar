@@ -72,12 +72,14 @@ const Home = () => {
                 </div>
             </MainViewCard>
             <MainViewCard
+                id="ABOUT_US_ID"
                 light
                 className={main_view_card_styles.main_view_card__padding}
             >
                 <IntroCard />
             </MainViewCard>
             <MainViewCard
+                id="LOCAL_SUPPLIERS_ID"
                 includeBrush
                 dark
                 backgroundImage={thirdBackgroundImage}
@@ -101,6 +103,7 @@ const Home = () => {
                 <ExperienceCard />
             </MainViewCard>
             <MainViewCard
+                id="MENU_ID"
                 light
                 className={main_view_card_styles.main_view_card__padding}
             >
@@ -150,6 +153,7 @@ const Home = () => {
                 events
             </MainViewCard> */}
             <MainViewCard
+                id="SHOP_ID"
                 includeBrush
                 dark
                 className={main_view_card_styles.main_view_card__padding}
@@ -173,6 +177,7 @@ const Home = () => {
                 <ShopCard />
             </MainViewCard>
             <MainViewCard
+                id="GALLERY_ID"
                 includeBrush
                 dark
                 className={main_view_card_styles.main_view_card__padding}
