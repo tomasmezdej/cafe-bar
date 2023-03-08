@@ -1,20 +1,90 @@
 @import "../variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:ital,wght@0,300;0,600;0,700;0,800;1,800&family=Righteous&display=swap&');
 
+.footer_wrap {
+  width: 100%;
+  padding: 15px;
+}
 .footer {
   display: flex;
-  align-items: flex-end;
   color: $text-light;
-
-  padding: 15px;
+  /* flex-direction: column; */
+  gap: 45px;
+  margin-top: 260px;
 
   width: 100%;
-
-
-
-  @media only screen and (max-width: 856px) {
-
+  font-family: Righteous;
+  h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 0;
+  }
+  h4 {
+    font-family: Righteous;
+    font-weight: 400;
+    line-height: 0;
   }
 
+  @media only screen and (max-width: 856px) {
+    gap: 25px;
+    flex-direction: column;
+    margin-top: 100px;
+  }
+
+}
+.footer_map_wrap {
+  display: none;
+  @media only screen and (max-width: 856px) {
+    display: block;
+  }
+}
+.footer_map {
+  margin-top: 15px;
+  width: 100%;
+  height: 250px;
+}
+.footer__opening_hours {
+  min-width: 250px;
+}
+.footer__opening_hours_wrap {
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 0px 15px;
+}
+.footer__opening_hours_day {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__contact_us {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media only screen and (max-width: 856px) {
+    gap: 40px;
+    flex-direction: row;
+  }
+}
+.footer__contact_us_contact_element {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__contact_us_contact_element_button {
+  cursor: pointer;
+  transition: 0.2s;
+  &:active {
+    transform: scale(1.2);
+  }
+}
+.footer__contact_us_contact {
+
+  h4:not(:first-child) {
+    /* line-height: 15px; */
+  }
+}
+.footer__contact_us_follow_us {
+  display: flex;
+  gap: 23px;
 }
 /*
 .footer__content {

@@ -71,6 +71,9 @@
   bottom: -65px;
   margin-left: -50px;
   transition: 0.8s;
+  @media only screen and (max-width: 1345px) and (min-width: 1023px) {
+    top: 55%;
+  }
 }
 .logo__wrap__hidden {
   position: absolute;

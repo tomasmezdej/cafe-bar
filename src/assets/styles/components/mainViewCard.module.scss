@@ -389,7 +389,7 @@
   div:nth-child(3) {
     display: flex;
     flex-direction: column;
-    align-content: end;
+    align-content: flex-end;
     div {
       margin-top: -130px;
     }
@@ -536,6 +536,7 @@
 }
 .footer__content {
   min-height: 60vh !important;
+  height: auto;
 }
 .gallery_element {
   cursor: pointer;
@@ -555,6 +556,7 @@
   }
   img {
       height:100%;
+      border-radius: 8px;
       object-fit: cover;
       overflow: hidden;
       width: 280px; /* or any custom size */
