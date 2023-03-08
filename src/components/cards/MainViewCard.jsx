@@ -4,9 +4,13 @@ const MainViewCard = (props) => {
 
   const className = props.dark ? main_view_card_styles.main_view_card__dark_bg : main_view_card_styles.main_view_card__light_bg
 
+  const darkened = props.darkenImg
+    ? "linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), " : ""
+
   const style = {
     // backgroundImage: `${(props.isMobile ? 'linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)) ,' : "")}url(${props.backgroundImage})`,
-    backgroundImage: `url(${props.backgroundImage})`,
+    // backgroundImage: `${darkened}url(${props.backgroundImage})`,
+    backgroundImage: `${darkened}url(${props.backgroundImage})`
   }
 
   const contentStyle = {

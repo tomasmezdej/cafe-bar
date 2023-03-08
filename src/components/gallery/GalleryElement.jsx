@@ -5,6 +5,9 @@ import { BiChevronRightSquare, BiChevronLeftSquare } from "react-icons/bi" */
 
 const GalleryElement = (props) => {
 
+  const className = props.className || main_view_card_styles.gallery_element
+  const type = props.type || "gallery"
+
   const [overlay, setOverlay] = useState(false)
 
   const overlayClickHandler = () => {
@@ -31,15 +34,31 @@ const GalleryElement = (props) => {
   return (
     <>
       <div
-        className={main_view_card_styles.gallery_element}
+        className={className}
         onClick={imgClickHandler}
       >
-        <img
-          src={props.img.img}
-          alt="gallery_img"
-          width="600"
-          height="400"
-        />
+        <div
+          className={main_view_card_styles.gallery_img_wrap}
+        >
+
+          <img
+            src={props.img.img}
+            alt="gallery_img"
+            width="600"
+            height="400"
+          />
+          {
+            type === "staff" &&
+            <div
+              className={main_view_card_styles.staff_hover}
+            >
+              <h4>
+                { props.name }
+              </h4>
+            </div>
+          }
+        </div>
+
       </div>
       {/* {
         overlay &&

@@ -10,6 +10,7 @@ import {
   AiFillInstagram
 } from "react-icons/ai"
 
+import { instagramLink } from "../../config/contact"
 
 import { days } from "../../config/openingHours"
 
@@ -20,15 +21,6 @@ const Footer = () => {
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(email)
-  }
-
-  const redirect = (dest) => {
-    const link = dest === 'fb'
-      ? "facebooklink"
-      : (dest === "ig")
-        ? "https://www.instagram.com/maracana.hankovce/"
-        : "twitterlink"
-    window.open(link, '_blank')
   }
 
   return (

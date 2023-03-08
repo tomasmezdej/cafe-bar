@@ -19,6 +19,8 @@ import MenuCard from "../contentCards/MenuCard";
 import ShopCard from "../contentCards/ShopCard";
 import GalleryCard from "../contentCards/GalleryCard";
 import Footer from "../main/Footer";
+import StaffCard from "../contentCards/StaffCard";
+import EventsCard from "../contentCards/EventsCard";
 
 const setViewport = () => {
     return {
@@ -109,9 +111,11 @@ const Home = () => {
             >
                 <MenuCard />
             </MainViewCard>
-            {/* <MainViewCard
+            <MainViewCard
+                id="STAFF_ID"
                 includeBrush
                 dark
+                darkenImg
                 className={main_view_card_styles.main_view_card__padding}
                 backgroundImage={fourthBackgroundImage}
             >
@@ -128,13 +132,16 @@ const Home = () => {
             </MainViewCard>
             <MainViewCard
                 light
-                className={main_view_card_styles.main_view_card__padding}
+                alignCenter
+                className={main_view_card_styles.gallery_card__content}
             >
-                staff
+                <StaffCard />
             </MainViewCard>
             <MainViewCard
+                id="EVENTS_ID"
                 includeBrush
                 dark
+                darkenImg
                 className={main_view_card_styles.main_view_card__padding}
                 backgroundImage={fourthBackgroundImage}
             >
@@ -150,8 +157,8 @@ const Home = () => {
                 light
                 className={main_view_card_styles.main_view_card__padding}
             >
-                events
-            </MainViewCard> */}
+                <EventsCard />
+            </MainViewCard>
             <MainViewCard
                 id="SHOP_ID"
                 includeBrush
@@ -180,6 +187,7 @@ const Home = () => {
                 id="GALLERY_ID"
                 includeBrush
                 dark
+                darkenImg
                 className={main_view_card_styles.main_view_card__padding}
                 backgroundImage={fifthBackgroundImage}
             >
