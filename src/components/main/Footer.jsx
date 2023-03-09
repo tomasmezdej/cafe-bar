@@ -89,56 +89,21 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          {/* <div>
-            <h2>
-              FOllow us
-            </h2>
-            <div
-              className={classes.footer__contact_us_follow_us}
-            >
-              <BsFacebook
-                className={classes.footer__contact_us_contact_element_button}
-                size="30px"
-                onClick={ () => redirect("fb") }
-              />
-              <AiFillInstagram
-                className={classes.footer__contact_us_contact_element_button}
-                size="30px"
-                onClick={ () => redirect("ig") }
-              />
-              <BsTwitter
-                className={classes.footer__contact_us_contact_element_button}
-                size="30px"
-                onClick={ () => redirect("tw") }
-              />
-            </div>
-          </div> */}
         </div>
       </div>
       <div className={classes.footer_map_wrap}>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2616.1328161584674!2d21.947495!3d49.027080899999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473eb3c10ed26783%3A0xa406bc0689142aa9!2sMaracana%20cafe%20%26%20bar%20%26%20ice%20cream!5e0!3m2!1ssk!2suk!4v1678270911787!5m2!1ssk!2suk"
-        className={classes.footer_map}
-        style={{
-          "border":"0",
-          "border-radius": "8px"
-        }}
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2616.1328161584674!2d21.947495!3d49.027080899999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473eb3c10ed26783%3A0xa406bc0689142aa9!2sMaracana%20cafe%20%26%20bar%20%26%20ice%20cream!5e0!3m2!1ssk!2suk!4v1678270911787!5m2!1ssk!2suk"
+          className={classes.footer_map}
+          style={{
+            "border":"0",
+            "border-radius": "8px"
+          }}
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
-      {/* <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2616.1328161584674!2d21.947495!3d49.027080899999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473eb3c10ed26783%3A0xa406bc0689142aa9!2sMaracana%20cafe%20%26%20bar%20%26%20ice%20cream!5e0!3m2!1ssk!2suk!4v1678270911787!5m2!1ssk!2suk"
-
-        style={{
-          "border":"0",
-          "border-radius": "8px"
-        }}
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe> */}
     </div>
   )
 }
