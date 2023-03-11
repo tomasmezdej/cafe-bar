@@ -7,11 +7,63 @@ import {
   MenuSectionBackLeft,
   MenuSectionBackRight
 } from "../../config/menu"
+import { useState } from "react"
 
 const MenuCard = () => {
+
+  const [rowOneAnimation, setRowOneAnimation] = useState(main_view_card_styles.second_card__row_one_animation_hide)
+  const [rowTwoAnimation, setRowTwoAnimation] = useState(main_view_card_styles.second_card__row_two_animation_hide)
+  const [titleAnimation, setTitleAnimation] = useState(main_view_card_styles.fifth_card_title_animation_hide)
+
+
+
+  window.addEventListener('scroll', function() {
+    var title = document.querySelector('#MENU_CARD_TITLE_ID');
+    var menuOne = document.querySelector('#MENU_CARD_ROW_ONE_ID');
+    var rowTwo = document.querySelector('#MENU_CARD_ROW_TWO_ID');
+
+    var positionTitle = title.getBoundingClientRect();
+    var positionOne = menuOne.getBoundingClientRect();
+    var positionTwo = rowTwo.getBoundingClientRect();
+
+    if(positionTitle.top < window.innerHeight && positionTitle.bottom >= 0) {
+      if (window.innerHeight - positionTitle.top > 250) {
+        setTitleAnimation(main_view_card_styles.fifth_card_title_animation_show)
+      } else {
+        setTitleAnimation(main_view_card_styles.fifth_card_title_animation_hide)
+      }
+    } else {
+      setTitleAnimation(main_view_card_styles.fifth_card_title_animation_hide)
+    }
+
+    if(positionOne.top < window.innerHeight && positionOne.bottom >= 0) {
+      if (window.innerHeight - positionOne.top > 250) {
+        setRowOneAnimation(main_view_card_styles.second_card__row_one_animation_show)
+      } else {
+        setRowOneAnimation(main_view_card_styles.second_card__row_one_animation_hide)
+      }
+    } else {
+      setRowOneAnimation(main_view_card_styles.second_card__row_one_animation_hide)
+    }
+
+    if(positionTwo.top < window.innerHeight && positionTwo.bottom >= 0) {
+      if (window.innerHeight - positionTwo.top > 250) {
+        setRowTwoAnimation(main_view_card_styles.second_card__row_two_animation_show)
+      } else {
+        setRowTwoAnimation(main_view_card_styles.second_card__row_two_animation_hide)
+      }
+    } else {
+      setRowTwoAnimation(main_view_card_styles.second_card__row_two_animation_hide)
+    }
+  });
   return (
-    <div className={main_view_card_styles.fifth_card}>
-        <div className={main_view_card_styles.fifth_card__row_one}>
+    <div
+      className={main_view_card_styles.fifth_card}
+    >
+        <div
+          id="MENU_CARD_TITLE_ID"
+          className={`${main_view_card_styles.fifth_card__row_one} ${titleAnimation}`}
+        >
             <h2>
               Our
             </h2>
@@ -20,7 +72,8 @@ const MenuCard = () => {
             </h1>
         </div>
         <div
-          className={main_view_card_styles.fifth_card__row_two}
+          id="MENU_CARD_ROW_ONE_ID"
+          className={`${main_view_card_styles.fifth_card__row_two} ${rowOneAnimation}`}
           style={{marginTop: "15px", gap: "15px"}}
         >
           <div className={main_view_card_styles.fifth_card__row_two_col_one}>
@@ -50,7 +103,8 @@ const MenuCard = () => {
           </div>
         </div>
         <div
-          className={main_view_card_styles.fifth_card__row_two}
+          id="MENU_CARD_ROW_TWO_ID"
+          className={`${main_view_card_styles.fifth_card__row_two} ${rowTwoAnimation}`}
           style={{marginTop: "15px", gap: "15px"}}
         >
           <div className={main_view_card_styles.fifth_card__row_two_col_one}>

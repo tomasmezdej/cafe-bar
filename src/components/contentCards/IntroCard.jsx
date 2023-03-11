@@ -7,12 +7,46 @@ import cardTwoImageTwo from "../../assets/images/pizza.jpg"
 
 const IntroCard = () => {
 
+  const [rowOneAnimation, setRowOneAnimation] = useState(main_view_card_styles.second_card__row_one_animation_hide)
+  const [rowTwoAnimation, setRowTwoAnimation] = useState(main_view_card_styles.second_card__row_two_animation_hide)
+
+  window.addEventListener('scroll', function() {
+    var rowOne = document.querySelector('#INTRO_CARD_ROW_ONE');
+    var rowTwo = document.querySelector('#INTRO_CARD_ROW_TWO');
+
+    var positionOne = rowOne.getBoundingClientRect();
+    var positionTwo = rowTwo.getBoundingClientRect();
+
+    if(positionOne.top < window.innerHeight && positionOne.bottom >= 0) {
+      if (window.innerHeight - positionOne.top > 250) {
+        setRowOneAnimation(main_view_card_styles.second_card__row_one_animation_show)
+      } else {
+        setRowOneAnimation(main_view_card_styles.second_card__row_one_animation_hide)
+      }
+    } else {
+      setRowOneAnimation(main_view_card_styles.second_card__row_one_animation_hide)
+    }
+
+    if(positionTwo.top < window.innerHeight && positionTwo.bottom >= 0) {
+      if (window.innerHeight - positionTwo.top > 250) {
+        setRowTwoAnimation(main_view_card_styles.second_card__row_two_animation_show)
+      } else {
+        setRowTwoAnimation(main_view_card_styles.second_card__row_two_animation_hide)
+      }
+    } else {
+      setRowTwoAnimation(main_view_card_styles.second_card__row_two_animation_hide)
+    }
+  });
+
   return (
     <div
-      id="TEST_ID"
+      id="INTRO_CARD"
       className={main_view_card_styles.second_card}
     >
-        <div className={main_view_card_styles.second_card__row_one}>
+        <div
+          id="INTRO_CARD_ROW_ONE"
+          className={`${main_view_card_styles.second_card__row_one} ${rowOneAnimation}`}
+        >
             <div className="img">
               <img src={cardTwoImage} alt="" />
             </div>
@@ -25,7 +59,10 @@ const IntroCard = () => {
               </h2>
             </div>
         </div>
-        <div className={main_view_card_styles.second_card__row_two}>
+        <div
+          id="INTRO_CARD_ROW_TWO"
+          className={`${main_view_card_styles.second_card__row_two} ${rowTwoAnimation}`}
+        >
             <div>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, magnam!

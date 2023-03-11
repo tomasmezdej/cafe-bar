@@ -2,43 +2,46 @@ import main_view_card_styles from "../../assets/styles/components/mainViewCard.m
 import ShopElement from "../shop/ShopElement"
 
 import { shopItems } from "../../config/shop"
+import { useState } from "react"
 
 const ShopCard = () => {
+
+  const [rowOneAnimation, setRowOneAnimation] = useState(main_view_card_styles.second_card__row_one_animation_hide)
+  const [rowTwoAnimation, setRowTwoAnimation] = useState(main_view_card_styles.second_card__row_two_animation_hide)
+
+  window.addEventListener('scroll', function() {
+    var rowOne = document.querySelector('#SHOP_CARD_ROW_ONE');
+    var rowTwo = document.querySelector('#SHOP_CARD_ROW_TWO');
+
+    var positionOne = rowOne.getBoundingClientRect();
+    var positionTwo = rowTwo.getBoundingClientRect();
+
+    if(positionOne.top < window.innerHeight && positionOne.bottom >= 0) {
+      if (window.innerHeight - positionOne.top > 250) {
+        setRowOneAnimation(main_view_card_styles.second_card__row_one_animation_show)
+      } else {
+        setRowOneAnimation(main_view_card_styles.second_card__row_one_animation_hide)
+      }
+    } else {
+      setRowOneAnimation(main_view_card_styles.second_card__row_one_animation_hide)
+    }
+
+    if(positionTwo.top < window.innerHeight && positionTwo.bottom >= 0) {
+      if (window.innerHeight - positionTwo.top > 250) {
+        setRowTwoAnimation(main_view_card_styles.second_card__row_two_animation_show)
+      } else {
+        setRowTwoAnimation(main_view_card_styles.second_card__row_two_animation_hide)
+      }
+    } else {
+      setRowTwoAnimation(main_view_card_styles.second_card__row_two_animation_hide)
+    }
+  });
+
   return (
     <div className={main_view_card_styles.sixth_card}>
-        {/* <div className={main_view_card_styles.sixth_card__row_one}>
-            <div className="img">
-            </div>
-            <div className="text">
-              <h2>
-                  A CUP OF GOURMET COFFEE SHARED WITH A FRIEND IS HAPPINESS TASTED AND TIME WELL SPENT.
-              </h2>
-            </div>
-        </div>
-        <div className={main_view_card_styles.sixth_card__row_two}>
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum aut repellendus similique.
-                Sed minus sit soluta corrupti,
-                dolore hic at fugiat tempora omnis laudantium, quasi expedita sint eligendi eveniet neque.
-              </p>
-            </div>
-            <div>
-              <h1>
-                DELIGHTFUL
-              </h1>
-              <h1>
-                EXPERIENCE
-              </h1>
-            </div>
-            <div>
-              <div>
-
-              </div>
-            </div>
-        </div> */}
         <div
-          className={main_view_card_styles.sixth_card__row_one}
+          id="SHOP_CARD_ROW_ONE"
+          className={`${main_view_card_styles.sixth_card__row_one} ${rowOneAnimation}`}
         >
           {
             shopItems.rowOne.map((item, index) =>
@@ -53,7 +56,8 @@ const ShopCard = () => {
           }
         </div>
         <div
-          className={main_view_card_styles.sixth_card__row_one}
+          id="SHOP_CARD_ROW_TWO"
+          className={`${main_view_card_styles.sixth_card__row_one} ${rowTwoAnimation}`}
         >
           {
             shopItems.rowTwo.map((item, index) =>

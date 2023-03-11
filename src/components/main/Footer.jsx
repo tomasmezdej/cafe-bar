@@ -2,7 +2,7 @@ import classes from "../../assets/styles/components/footer.module.scss"
 import {
   BiCopy
 } from "react-icons/bi"
-import {
+/* import {
   BsFacebook,
   BsTwitter,
 } from "react-icons/bs"
@@ -10,7 +10,9 @@ import {
   AiFillInstagram
 } from "react-icons/ai"
 
-import { instagramLink } from "../../config/contact"
+import { instagramLink } from "../../config/contact" */
+
+import downloadButton from "../../assets/images/google_play_download.png"
 
 import { days } from "../../config/openingHours"
 
@@ -87,6 +89,11 @@ const Footer = () => {
                   { phone }
                 </h4>
               </div>
+              {/* <div
+                className={classes.footer__contact_us_contact_element}
+              >
+                <img src={downloadButton} alt="" width={"50%"} />
+              </div> */}
             </div>
           </div>
         </div>
